@@ -1,0 +1,276 @@
+/* <!-- Your portfolio should have at least one media query -->
+<!-- The height of the welcome section should be equal to the height of the viewport -->
+<!-- The navbar should always be at the top of the viewport --> */
+/* font-family: 'Caveat', cursive;
+font-family: 'Graduate', serif;
+font-family: 'Red Hat Mono', monospace; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Mono', monospace;
+    text-decoration: none;
+    color: black;
+   scroll-behavior: smooth;
+  
+ }
+ body{
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 1fr 20fr 20fr 20fr 1fr;
+    grid-template-areas:
+        "nav"
+        "ws"
+        "projects"
+        "profilelink"
+        "footer";}
+
+ nav{
+    
+    padding: 10px;
+    width: 100%;
+   
+    grid-area: nav;
+    position: fixed;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+}
+body nav a {
+    position: relative;
+    display: inline-flex;
+    font-family: 'Graduate', serif;
+    color: white;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 15px;
+    z-index: 1;
+    overflow: hidden;
+ }
+ body nav a:hover {
+    color: black;
+   
+    transition: 0.8s;
+ }
+ body nav a::before {
+    content:'' ;
+    position:absolute ;
+    top: 0;
+    right:0 ;
+    width: 0;
+    height: 100%;
+    background: white;
+    z-index: -1;
+    transition: 0.8s;
+ }
+ body nav a:hover:before{
+    width: 100%;
+    }
+
+    .left{
+    display: flex;
+    align-items: center;
+   }
+   #logo{
+       padding: 5px;
+       height: 5vh;
+       width: 3vw;
+   }
+   .left h1{
+       color: white;
+       font-family: 'Covered By Your Grace', cursive;
+       font-weight: lighter;
+   }
+   .welcome-section{
+      padding: 10px 30px;
+    margin-top: 20px;
+    grid-area: ws;
+    background-color: #E7DAE0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   grid-template-areas: "pp h1" ;
+   justify-content: center;
+   align-items: center;
+   }
+   .svg{
+    grid-area: pp;
+    position: static;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-areas: "on";
+    justify-content: center;
+    align-items: center;
+   }
+   svg{
+    grid-area: pp;
+    height: 412px;
+   }
+   #dp{
+    grid-area: pp;
+    height: 220px;
+    border-radius: 75px;
+    margin-top: 49px;
+    margin-left: 74px;
+   }
+   .h1{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    text-align: justify;
+   }
+   .welcome-section h1{
+grid-area: h1;
+padding: 10px;
+font-family: 'Graduate', serif;
+text-shadow: 1px 2px 2px #CE5937;
+
+   }
+   code{
+   
+    grid-area: h1;
+   }
+   h2{
+      color: white;
+   }
+   .project{
+    grid-area:projects ;
+    background-color: #E7DAE0;
+   }
+
+ .project{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ }
+ .project-tile a{
+    height: 50px;
+    margin: 5px;
+    width: 150px;
+    border: 1px solid #40262B;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.profilelink{
+   grid-area: profilelink;
+   background-color: #E7DAE0;
+   display: flex;
+
+    
+}
+.profilelink h1{
+   font-family: 'Graduate', serif;
+}
+.cotainer{
+  
+   text-align: center;
+   margin-top: 360px;
+   display: grid;
+   grid-template-rows: 1fr 1fr 1fr 1fr;
+   grid-template-areas: "github linkdin instagram twitter";
+   justify-content: center;
+   align-items: center;
+}
+.btn{
+   
+   border: 1px solid #40262B;
+   border-radius: 40px;
+   background: none;
+   padding: 10px 20px;
+   font-size: 20px;
+   font-family:'Graduate', serif;
+   cursor: pointer;
+   margin: 10px;
+   transition: 0.8s;
+   position: relative;
+   overflow: hidden;
+   z-index: 1;
+   }
+   .btn1,.btn2{
+       color:#40262B ;
+   }
+   .btn3,.btn4{
+       color:#fff ;
+   }
+   .btn1:hover,.btn2:hover{
+       color:#fff ;
+   }
+   .btn3:hover,.btn4:hover{
+       color:#40262B ;
+   }
+   
+   .btn::before{
+       content:"";
+       position: absolute;
+       left:0;
+       height:0;
+       width: 100%;
+       background:#40262B;
+       z-index: -1;
+       transition: 0.8s;
+    
+   }
+   .btn1::before,.btn3::before{
+      top: 0;
+      border-radius: 0 0 50% 50%;
+   }
+   .btn2::before,.btn4::before{
+       bottom: 0;
+       border-radius: 50% 50% 0 0;
+    }
+    .btn3::before,.btn4::before{
+      height: 180%;
+    }
+    .btn1:hover::before,.btn2:hover::before{
+      height: 180%;
+    }
+    .btn3:hover::before,.btn4:hover::before{
+       height: 0%;
+     }
+
+button{
+   display: flex;
+   flex-direction: row;
+   
+   justify-content: center;
+   align-items: center;
+}
+
+button img{
+height: 25px;
+width: 25px;
+margin: 5px;
+}
+.profilelink{
+   display: flex;
+   flex-direction: row;
+   
+   justify-content: center;
+   align-items: center;
+}
+footer{
+   grid-area: footer;
+   background-color: black;
+   color: white;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+  font-family: 'Graduate', serif;
+
+}
+footer a,footer p{
+  
+   color: white;
+   }
+   #f2{
+   gap: 5px;
+   }
