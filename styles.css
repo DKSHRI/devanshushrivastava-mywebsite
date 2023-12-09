@@ -109,11 +109,11 @@ body nav a {
     height: 412px;
    }
    #dp{
-    grid-area: pp;
-    height: 220px;
-    border-radius: 75px;
-    margin-top: 49px;
-    margin-left: 74px;
+      grid-area: pp;
+      height: 218px;
+      border-radius: 177px 22px 167px 153px;
+      margin-top: 108px;
+      margin-left: 77px;
    }
    .h1{
     display: inline-flex;
